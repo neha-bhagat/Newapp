@@ -1,0 +1,79 @@
+<!-- <div id="sidebar-wrapper">
+    <div style="display:flex;" class="my-3 mx-3">
+        <div>
+            <img class="mb-2 p-2 w-11" [src]="imageurl" alt="" />
+        </div>
+        <div class="sidebar-heading py-4 primary-text fs-22px" style="color:#0C1E76; font-weight: bold;">
+            {{title}}
+        </div>
+    </div>
+  <div class="list-group list-group-flush my-3 mx-3">
+    <a
+      class="list-group-item list-group-item-action bg-transparent second-text active"
+      style="color: black; cursor: pointer; display: flex; gap: 15px;
+      line-height: 1.2;"
+      [routerLink]="item.route"
+      *ngFor="let item of navData"
+    >
+      <img
+        style="min-width: 1.5rem; max-width: 1.5rem; max-height: 1.5rem"
+        [src]="item.imgPath"
+        alt=""
+      />
+      {{ item.data }}</a
+    >
+  </div>
+
+  <button class="btn btn-lg ext-btn mt-4" (click)="logout()">
+    <img src="assets/dashboard-imgs/exit-icon.png" alt="" />
+  </button>
+</div> -->
+<nav>
+    <div style="display:flex; justify-content: center; align-items: center;" class="my-3 mx-3">
+        <div>
+            <img class="w-11" [src]="imageurl" alt="" />
+        </div>
+        <div class="sidebar-heading py-4 primary-text fs-22px" style="color:#0C1E76; font-weight: bold;">
+            {{title}}
+        </div>
+    </div>
+    <!-- <div class="logo-name">
+        <div class="logo-image">
+            <img class="mb-2 p-2 w-11" [src]="imageurl" alt="" />
+        </div>
+        <span class="logo_name2" style="color:
+        #0C1E76">{{title}}</span>
+    </div> -->
+
+    <div class="menu-items">
+        <ul class="nav-links" style="margin-left: 8px;">
+  <div class="list-group list-group-flush my-3 mx-3">
+
+            <div  *ngFor="let item of navData">
+                <a class="list-group-item list-group-item-action bg-transparent second-text active" style="color: black;cursor: pointer; display: flex; gap: 15px;line-height: 1.2;" [routerLink]="item.route">
+                 <img style="min-width: 1.5rem; max-width: 1.5rem; max-height: 1.5rem"[src]="item.imgPath"alt=""/>
+                 {{ item.data }}</a>
+            </div>
+        </div>
+        </ul>
+        <ul class="logout-mode">
+            <li><a href="#">
+                <i class="fa fa-lock"></i>
+                <span class="link-name">
+                  <img src="../../assets/" alt="">
+                  Logout</span>
+            </a></li>
+
+            <li class="mode" style="opacity: 0;">
+                <a href="#">
+                    <i class="uil uil-moon"></i>
+                <span class="link-name">Dark Mode</span>
+            </a>
+
+            <div class="mode-toggle" style="opacity: 0;">
+              <span class="switch"></span>
+            </div>
+        </li>
+        </ul>
+    </div>
+  </nav>

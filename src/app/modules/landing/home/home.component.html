@@ -1,0 +1,144 @@
+<section class="container-fluid p-0">
+    <div class="d-flex" id="wrapper">
+        <!-- <app-sidenav></app-sidenav> -->
+        <app-bescom-sidenav ></app-bescom-sidenav>
+    </div>
+</section>
+ <section class="dashboard">
+    <div class="top">
+        <button (click)="navclose()" class="navmenu">
+            <i [ngClass]="!close ? 'fa fa-bars' : 'fa fa-times'" style="font-size: 30px;"></i>
+        </button>
+        <h1 style="font-style: Inter, sans-serif;font-size: 26px;font-weight: 700;line-height: 24px;color: #0C1E76;"
+        class="heading">BESCOM R-APDRP Home Page</h1>
+        <!-- class="heading">{{title}} R-APDRP Home Page</h1> -->
+             <div class="search-box">
+            <img src="../../assets/ab.svg" alt=""  class="profile-img">
+            <h3 style="color: #0c1e76 !important; font-size: 17px;margin: 0px;">Hello Akshay</h3>
+            <!-- <h3 style="color: #0c1e76 !important;">Hello {{ user.username}}</h3> -->
+            <img class="notification" src="../../assets/notification.png" class="notification-icon" alt="">
+            <button type="button" style="    display: flex;
+            align-items: center;" class="btn btn-light logout" (click)="logout()">
+                <img style="width: 15px; height: 15px;     margin-right: 5px;
+                margin-top: 2px;" src="../../../../assets/images/dash/logout.png" />
+                Logout
+            </button>
+        </div>
+    </div>
+    <div class="dash-content">
+        <div class="upDateTiming">
+            Last Login 19-Jan-2023 03:19 PM
+        </div>
+        <!-- <div id="google_translate_element" style="margin-top:90px;width: 55px; "></div> -->
+        <div class="overview">
+          <div class="boxes">
+    
+            <div class="box">
+              <div class="img-box bgClolorImg1" style="--hover-color: #FFF0F5">
+                <img class="box-inner-img" src="../assets//images/dash/Bi-Publisher.png" alt="">
+              </div>
+              <h2 class="text">BI-Publisher</h2>
+            </div>
+    
+            <div class="box">
+              <div class="img-box bgClolorImg2" style="--hover-color: #F5F5FE">
+                <img class="box-inner-img" src="../assets/images/dash/Frame 1313.png" alt="">
+              </div>
+              <h2 class="text">Meter Data Aquijition</h2>
+            </div>
+    
+            <div class="box">
+              <div class="img-box bgClolorImg3" style="--hover-color: #E4FFD9">
+                <img class="box-inner-img" src="../assets/images/dash/computer 4.png" alt="">
+              </div>
+              <h2 class="text">Meter Data AMI</h2>
+            </div>
+    
+            <div class="box">
+              <div class="img-box bgClolorImg4" style="--hover-color: #FFF0F5">
+                <img class="box-inner-img" src="../assets/images/dash/Icon 3.png" alt="">
+              </div>
+              <h2 class="text">Meter Data Management</h2>
+            </div>
+    
+            <div class="box">
+              <div class="img-box bgClolorImg5" style="--hover-color: #FFF0F5">
+                <img class="box-inner-img" src="../assets/images/dash/GIS Viewer Icon.png" alt="">
+              </div>
+              <h2 class="text">GIS Viewer</h2>
+            </div>
+    
+          </div>
+        </div>
+    
+        <div class="overview">
+          <div class="boxes">
+    
+            <div class="box">
+              <div class="img-box bgClolorImg6" style="--hover-color: #E4FFD9">
+                <img class="box-inner-img" src="../assets/images/dash/MIS.png" alt="">
+              </div>
+              <h2 class="text">Management IS</h2>
+            </div>
+    
+            <div class="box">
+              <div class="img-box bgClolorImg7" style="--hover-color: #F5F5FE">
+                <img class="box-inner-img" src="../assets/images/dash/Document Repository icon.png" alt="">
+              </div>
+              <h2 class="text">Document Repositpory</h2>
+            </div>
+    
+            <div class="box">
+              <div class="img-box bgClolorImg8" style="--hover-color: #FFF0F5">
+                <img class="box-inner-img" src="../assets/images/dash/IMS icon.png" alt="">
+              </div>
+              <h2 class="text">IMS</h2>
+            </div>
+    
+            <div class="box">
+              <div class="img-box bgClolorImg9" style="--hover-color: #FFF0F5">
+                <img class="box-inner-img" src="../assets/images/dash/users.png" alt="">
+              </div>
+              <h2 class="text">Customer Relationship</h2>
+            </div>
+    
+            <div class="box">
+              <div class="img-box bgClolorImg10" style="--hover-color: #E4FFD9">
+                <img class="box-inner-img" src="../assets/images/dash/KR.png" alt="">
+              </div>
+              <h2 class="text">Karnataka R-APDRP</h2>
+            </div>
+    
+          </div>
+        </div>
+    
+        <div class="overview">
+          <div class="boxes">
+    
+            <div class="box">
+              <div class="img-box bgClolorImg11" style="--hover-color: #F5F5FE">
+                <img class="box-inner-img" src="../assets/images/dash/GIS Icon.png" alt="">
+              </div>
+              <h2 class="text">GIS</h2>
+            </div>
+    
+            <div class="box">
+              <div class="img-box bgClolorImg12" style="--hover-color: #FFF0F5">
+                <img class="box-inner-img" src="../assets/images/dash/Frame 1312.png" alt="">
+              </div>
+              <h2 class="text">Assets & management</h2>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+   </section>
+
+   <!-- <div *ngIf="close"> -->
+    <!-- <section class="container-fluid p-0">
+        <div class="d-flex" id="wrapper"> -->
+            <!-- <app-bescom-sidenav ></app-bescom-sidenav> -->
+            <app-sidenav *ngIf="close"></app-sidenav>
+        <!-- </div> -->
+    <!-- </section> -->
+   <!-- </div> -->

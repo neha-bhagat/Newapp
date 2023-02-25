@@ -1,0 +1,100 @@
+<!-- <div id="sidebar-wrapper">
+    <div style="display:flex;" class="my-3 mx-3">
+        <div>
+            <img class="mb-2 p-2 w-11" [src]="imageurl" alt="" />
+        </div>
+        <div class="sidebar-heading py-4 primary-text fs-22px" style="color:#0C1E76; font-weight: bold;">
+            {{title}}
+        </div>
+    </div>
+  <div class="list-group list-group-flush my-3 mx-3">
+    <a
+      class="list-group-item list-group-item-action bg-transparent second-text active"
+      style="color: black; cursor: pointer; display: flex; gap: 15px;
+      line-height: 1.2;"
+      [routerLink]="item.route"
+      *ngFor="let item of navData"
+    >
+      <img
+        style="min-width: 1.5rem; max-width: 1.5rem; max-height: 1.5rem"
+        [src]="item.imgPath"
+        alt=""
+      />
+      {{ item.data }}</a
+    >
+  </div>
+
+  <button class="btn btn-lg ext-btn mt-4" (click)="logout()">
+    <img src="assets/dashboard-imgs/exit-icon.png" alt="" />
+  </button>
+</div> -->
+<nav>
+    <div style="display:flex;" class="">
+        <div>
+            <img style="    width: 45px;
+            height: 60px;" [src]="imageurl" alt="" />
+        </div>
+        <div class="primary-text" style="color: #0C1E76;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        padding: 0px 10px;">
+            {{title}}
+        </div>
+    </div>
+    <!-- <div class="logo-name">
+        <div class="logo-image">
+            <img class="mb-2 p-2 w-11" [src]="imageurl" alt="" />
+        </div>
+        <span class="logo_name2" style="color:
+        #0C1E76">{{title}}</span>
+    </div> -->
+
+    <div class="menu-items">
+        <ul style="    padding: 0px;">
+  <div>
+
+            <div  *ngFor="let item of navData; let index = index">
+                <a [ngClass]="index === 0 ? 'bgSideColor' : ''" class="list-group-item list-group-item-action second-text" style="cursor: pointer; display: flex; gap: 15px;line-height: 1.2; 
+                border-radius: 8px;
+                padding: 16px;
+                margin-bottom: 5px;" [routerLink]="item.route">
+                 <img style="width: 18px; height: 18px;" [src]="item.imgPath" alt=""/>
+                 {{ item.data }}</a>
+            </div>
+        </div>
+        </ul>
+        <ul style="padding-left: 15px;">
+          <li>
+            <span style="display: flex;
+            justify-content: flex-start;
+            align-items: center;">
+              <img style="width: 15px;
+              height: 15px;
+              margin-right: 5px;" src="../../../../../../../assets/images/dash/logout.png" />
+              Logout</span>
+          </li>
+        </ul>
+        <!-- <ul class="logout-mode">
+            <li><a href="#" (click)="logout()">
+                <i class="fa fa-lock"></i>
+                <span class="link-name">
+                  <img src="../../assets/"  alt="">
+                  Logout</span>
+            </a></li>
+
+            <li class="mode" style="opacity: 0;">
+                <a href="#">
+                    <i class="uil uil-moon"></i>
+                <span class="link-name">Dark Mode</span>
+            </a>
+
+            <div class="mode-toggle" style="opacity: 0;">
+              <span class="switch"></span>
+            </div>
+        </li>
+        </ul> -->
+    </div>
+  </nav>
