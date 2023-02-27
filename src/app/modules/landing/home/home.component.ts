@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'app/core/auth/auth.service';
 import { KeycloakService } from 'keycloak-angular';
+import {TranslateService} from "@ngx-translate/core";
 import { timer, finalize, takeWhile, takeUntil, tap, Subject } from 'rxjs';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
@@ -84,8 +85,9 @@ const navData: Menu[] = [
     styleUrls: ['./home.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class LandingHomeComponent implements AfterViewInit,OnInit
-{
+export class LandingHomeComponent implements AfterViewInit,OnInit{
+  @ViewChild('navdrop', { static: true}) navdrop: ElementRef;
+
     close:boolean = false
     countdown: number = 5;
     navData: any = navData;
@@ -96,8 +98,18 @@ export class LandingHomeComponent implements AfterViewInit,OnInit
     /**
      * Constructor
      */
-    constructor(private elementRef:ElementRef,public router:Router,private _authService:AuthService,private readonly keycloak: KeycloakService)
+    constructor(private translate: TranslateService,private elementRef:ElementRef,public router:Router,private _authService:AuthService,private readonly keycloak: KeycloakService)
     {
+      translate.setDefaultLang('en');
+      translate.use('en');
+    }
+
+    useLanguage(language: string) {
+      this.translate.use(language);
+    }
+    
+    dropClick() {
+      this.navdrop.nativeElement.classList.toggle("show");
     }
 
     ngOnInit(){

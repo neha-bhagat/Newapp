@@ -11,6 +11,9 @@ import { LanguagesModule } from 'app/layout/common/languages/languages.module';
 import { LayoutModule } from 'app/layout/layout.module';
 import { SidenavComponent } from '../BESCOM/bescom-dashboard/components/sidenav/sidenav.component';
 import { NO_ERRORS_SCHEMA } from '@angular/compiler';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgMarqueeModule } from 'ng-marquee';
 
 @NgModule({
     declarations: [
@@ -25,6 +28,9 @@ import { NO_ERRORS_SCHEMA } from '@angular/compiler';
         MatIconModule,
         SharedModule,
         LanguagesModule,
+        NgbDropdownModule,
+        TranslateModule,
+        NgMarqueeModule
     ],
     schemas:[]
 })
